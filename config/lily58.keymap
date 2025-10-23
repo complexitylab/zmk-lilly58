@@ -18,8 +18,8 @@ combos {
         key-positions = <51 56>;
         bindings = <&kp DEL>;
         slow-release;  // Dodaj slow-release dla lepszej kontroli
+        };
     };
-    
 
     keymap {
         compatible = "zmk,keymap";
