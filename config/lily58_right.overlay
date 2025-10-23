@@ -1,14 +1,12 @@
-/ {
-    &display {
-        compatible = "solomon,ssd1306fb-i2c";
-        height = <32>;
-        width = <128>;
-        segment-offset = <0>;
-        page-offset = <0>;
-        display-offset = <0>;
-        rotate = <0>;
-        contrast = <127>;
-        address = <0x3C>;
-        label = "OLED";
-    };
+&display {
+    compatible = "solomon,ssd1306fb-i2c";
+    height = <32>;
+    width = <128>;
+    segment-offset = <0>;
+    page-offset = <0>;
+    display-offset = <0>;
+    rotate = <0>;
+    contrast = <127>;
+    address = <0x3C>;
+    label = "OLED";
 };
