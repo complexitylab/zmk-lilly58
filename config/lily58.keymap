@@ -65,12 +65,7 @@
 &trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &trans        &trans    &trans  &trans     &kp MINUS  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
                                                  &trans             &trans        &trans        &trans    &trans  &trans     &trans     &trans
             >;
-
-            encoder_left {
-                sensor-bindings = <&inc_dec_kp BT_SEL 1 BT_SEL 2>;
-            };
-            encoder_right {
-                sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         raise_layer {
