@@ -10,15 +10,14 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        my-del {
-            timeout-ms = <100>;  // Zwiększ z domyślnych 50ms do 100ms lub więcej
-            key-positions = <51 56>;
-            bindings = <&kp DEL>;
-            slow-release;  // Dodaj slow-release dla lepszej kontroli
-        };
+    behaviors {
+      bspc_del: backspace_delete {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp BSPC>, <&kp DEL>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        keep-mods = <(MOD_RSFT)>; // opcjonalnie: zachowaj prawy shift
+      };
     };
 
     keymap {
