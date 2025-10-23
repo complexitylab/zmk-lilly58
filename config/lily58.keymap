@@ -10,19 +10,16 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
+combos {
+    compatible = "zmk,combos";
 
-        my-del {
-            bindings = <&kp DEL>;
-            key-positions = <51 56>;
-        };
-
-        zastepcza-jedynka {
-            bindings = <&kp N1>;
-            key-positions = <52 55>;
-        };
+    my-del {
+        timeout-ms = <100>;  // Zwiększ z domyślnych 50ms do 100ms lub więcej
+        key-positions = <51 56>;
+        bindings = <&kp DEL>;
+        slow-release;  // Dodaj slow-release dla lepszej kontroli
     };
+    
 
     keymap {
         compatible = "zmk,keymap";
